@@ -1,0 +1,19 @@
+{% extends 'assets/base.html' %}
+
+{% block title %} Lista de Ativos {% endblock %}
+{% block content %}
+    <div class="row">
+        {% for asset in asset_list %}
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <a href="/assets/{{ asset.id }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ asset.symbol }}</h5>
+                            <p class="card-text">{{ asset.long_name }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %} 
+    </div>
+{% endblock  %}

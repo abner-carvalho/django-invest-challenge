@@ -1,0 +1,12 @@
+{% extends 'assets/base.html' %}
+
+{% block title %} {{ asset.symbol }} - {{ asset.long_name }} {% endblock %}
+{% block content %}
+    <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ asset.symbol }}</h5>
+                <p class="card-text">{{ asset.long_name }}</p>
+            </div>
+        </a>
+    </div>
+{% endblock  %}
